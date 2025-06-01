@@ -1,0 +1,24 @@
+** start of script.js **
+
+function mutation(arr) {
+  let first = arr[0].toLowerCase();
+  let second = arr[1].toLowerCase();
+
+  for (let char of second) {
+    if (!first.includes(char)) {
+      return false;
+    }
+  }
+  return true;
+}
+
+// Example test cases
+console.log(mutation(["hello", "Hello"]));  // true
+console.log(mutation(["hello", "hey"]));    // false
+console.log(mutation(["Alien", "line"]));   // true
+console.log(mutation(["floor", "for"]));    // true
+console.log(mutation(["hello", "neo"]));    // false
+
+
+** end of script.js **
+
